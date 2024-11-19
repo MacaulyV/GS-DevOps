@@ -90,6 +90,8 @@ Além disso, a documentação bem estruturada facilita o uso, a integração e o
 
   ---
 
+## Para mais Detalhes Sobre o Projeto (Opcional)
+
 # 🚗 Documentação da Camada Web - ElectriXDriveUI
 
 ## 📄 Descrição Inicial
