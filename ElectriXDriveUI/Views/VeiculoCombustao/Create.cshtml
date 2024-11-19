@@ -1,0 +1,244 @@
+﻿@model ElectriXDriveUI.ViewModels.VeiculoCombustaoViewModel
+
+@{
+    ViewData["Title"] = "Adicionar Veículo de Combustão";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - ElectriXDriveUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome para ícones (opcional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        nav,
+        footer {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: radial-gradient(circle farthest-corner at 48.4% 47.5%, rgba(122,183,255,1) 0%, rgba(21,83,161,1) 90%);
+            color: #f5f5f5;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container-custom {
+            background-color: #000;
+            padding: 30px 35px;
+            border-radius: 50px;
+            box-shadow: 0 20px 40px rgba(173, 216, 230, 0.8);
+            max-width: 450px;
+            width: 100%;
+            transition: transform 0.2s ease-out;
+            position: relative;
+            margin: auto;
+        }
+
+        h2 {
+            transform: translateY(25%);
+            font-weight: bold;
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 2.4em;
+            background-image: linear-gradient(180.7deg, rgba(0,213,255,1) 2.5%, rgba(79,255,255,1) 97.7%);
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+        }
+
+        h2 i {
+            color: #f5f5f5;
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+        }
+
+        .btn-primary {
+           background-image: linear-gradient(to right, #000046 0%, #1CB5E0  51%, #000046  100%);
+            border: none;
+            border-radius: 10px;
+            padding: 15px 20px;
+            color: #fff;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(26, 41, 128, 0.4);
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            font-size: 1.2em;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 41, 128, 0.6);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+           
+        }
+
+        label {
+            font-weight: bold;
+            color: #f5f5f5;
+        }
+
+        input.form-control {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #f0f8ff;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+            padding-left: 40px;
+        }
+
+        input.form-control:focus {
+            background: #e0f0ff;
+            outline: none;
+            transform: translateY(-2px);
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+.form-group i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(25%);
+    color: transparent;  /* Torna o texto transparente */
+    background-image: radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgba(122,183,255,1) 0%, rgba(21,83,161,1) 90% );
+    -webkit-background-clip: text;
+    background-clip: text;  /* Aplica o gradiente ao texto */
+    font-size: 1.1em;
+}
+
+
+        #message {
+            margin-top: 20px;
+        }
+    </style>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector('nav');
+        if (nav) {
+            nav.style.display = 'none';
+        }
+
+        // Efeito de movimento 3D com o mouse
+        const container = document.querySelector('.container-custom');
+
+        if (container) {
+            container.addEventListener('mousemove', (e) => {
+                const { width, height, left, top } = container.getBoundingClientRect();
+                const x = e.clientX - left - width / 2;
+                const y = e.clientY - top - height / 2;
+                const rotateX = (y / height) * 25;  // Rotação vertical
+                const rotateY = (x / width) * -25;  // Rotação horizontal
+                container.style.transform = `perspective(4000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                container.style.transform = `perspective(4000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            });
+
+            // Diminui a duração da transição para responder mais rapidamente
+            container.style.transition = 'transform 0.2s ease-out';
+        }
+    });
+</script>
+
+</head>
+<body>
+    <div class="container-custom">
+        <h2>Adicionar Veículo de Combustão</h2>
+
+        <div id="message" class="alert alert-danger" style="display: none;"></div>
+
+        <form id="createVeiculoForm">
+            <div class="form-group">
+                <label for="ID_Usuario">ID do Usuário</label>
+                <i class="fas fa-user"></i>
+                <input type="number" class="form-control" id="ID_Usuario" name="ID_Usuario" required />
+            </div>
+            <div class="form-group">
+                <label for="Marca">Marca</label>
+                <i class="fas fa-car"></i>
+                <input type="text" class="form-control" id="Marca" name="Marca" required />
+            </div>
+            <div class="form-group">
+                <label for="Modelo">Modelo</label>
+                <i class="fas fa-car-side"></i>
+                <input type="text" class="form-control" id="Modelo" name="Modelo" required />
+            </div>
+            <div class="form-group">
+                <label for="Ano">Ano</label>
+                <i class="fas fa-calendar-alt"></i>
+                <input type="number" class="form-control" id="Ano" name="Ano" required />
+            </div>
+            <div class="form-group">
+                <label for="Quilometragem_Mensal">Quilometragem Mensal</label>
+                <i class="fas fa-road"></i>
+                <input type="number" class="form-control" id="Quilometragem_Mensal" name="Quilometragem_Mensal" required />
+            </div>
+            <button type="button" id="btnSubmit" class="btn btn-primary">Adicionar Veículo</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('btnSubmit').addEventListener('click', async function () {
+            const idUsuario = document.getElementById('ID_Usuario').value;
+            const marca = document.getElementById('Marca').value;
+            const modelo = document.getElementById('Modelo').value;
+            const ano = document.getElementById('Ano').value;
+            const quilometragemMensal = document.getElementById('Quilometragem_Mensal').value;
+
+            // Dados que serão enviados para a API
+            const veiculoData = {
+                ID_Usuario: idUsuario,
+                Marca: marca,
+                Modelo: modelo,
+                Ano: parseInt(ano),
+                Quilometragem_Mensal: parseInt(quilometragemMensal)
+            };
+
+            try {
+                // Fazer a requisição POST para a API usando Fetch API
+                const response = await fetch('https://localhost:7049/api/VeiculoCombustaoApi', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(veiculoData)
+                });
+
+                if (!response.ok) {
+                    // Caso tenha ocorrido algum erro
+                    const errorData = await response.json();
+                    document.getElementById('message').style.display = 'block';
+                    document.getElementById('message').innerText = `Erro: ${errorData.message || 'Erro ao adicionar veículo. Tente novamente.'}`;
+                } else {
+                    // Caso de sucesso, redirecionar para a página de lista de veículos
+                    window.location.href = '@Url.Action("Index", "VeiculoCombustao")';
+                }
+            } catch (error) {
+                // Tratar erros inesperados, como falhas de rede
+                document.getElementById('message').style.display = 'block';
+                document.getElementById('message').innerText = `Erro inesperado: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

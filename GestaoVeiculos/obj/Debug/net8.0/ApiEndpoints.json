@@ -1,0 +1,421 @@
+[
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "GestaoVeiculos.DTOs.Request.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.ComparacaoEficienciaApiController",
+    "Method": "CompararEficiencia",
+    "RelativePath": "api/ComparacaoEficienciaApi/Comparar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idVeiculoCombustao",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idVeiculoEletrico",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.UsuarioApiController",
+    "Method": "GetUsuarios",
+    "RelativePath": "api/UsuarioApi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoVeiculos.DTOs.Response.UsuarioResponseDTO, GestaoVeiculosApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.UsuarioApiController",
+    "Method": "PostUsuario",
+    "RelativePath": "api/UsuarioApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioDTO",
+        "Type": "GestaoVeiculos.DTOs.Request.UsuarioRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoVeiculos.DTOs.Response.UsuarioResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.UsuarioApiController",
+    "Method": "PutUsuario",
+    "RelativePath": "api/UsuarioApi/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuarioDTO",
+        "Type": "GestaoVeiculos.DTOs.Request.UsuarioRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.UsuarioApiController",
+    "Method": "GetUsuario",
+    "RelativePath": "api/UsuarioApi/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoVeiculos.DTOs.Response.UsuarioResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.UsuarioApiController",
+    "Method": "DeleteUsuario",
+    "RelativePath": "api/UsuarioApi/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoCombustaoApiController",
+    "Method": "GetVeiculosCombustao",
+    "RelativePath": "api/VeiculoCombustaoApi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoVeiculos.Models.VeiculoCombustao, GestaoVeiculosApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoCombustaoApiController",
+    "Method": "PostVeiculoCombustao",
+    "RelativePath": "api/VeiculoCombustaoApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "veiculoDTO",
+        "Type": "GestaoVeiculos.DTOs.Request.VeiculoCombustaoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoVeiculos.DTOs.Response.VeiculoCombustaoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoCombustaoApiController",
+    "Method": "GetVeiculoCombustao",
+    "RelativePath": "api/VeiculoCombustaoApi/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoVeiculos.DTOs.Response.VeiculoCombustaoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoCombustaoApiController",
+    "Method": "PutVeiculoCombustao",
+    "RelativePath": "api/VeiculoCombustaoApi/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "veiculoDTO",
+        "Type": "GestaoVeiculos.DTOs.Request.VeiculoCombustaoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoCombustaoApiController",
+    "Method": "DeleteVeiculoCombustao",
+    "RelativePath": "api/VeiculoCombustaoApi/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoEletricoApiController",
+    "Method": "GetVeiculosEletricos",
+    "RelativePath": "api/VeiculoEletricoApi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[GestaoVeiculos.DTOs.Response.VeiculoEletricoResponseDTO, GestaoVeiculosApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoEletricoApiController",
+    "Method": "PostVeiculoEletrico",
+    "RelativePath": "api/VeiculoEletricoApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "veiculoDTO",
+        "Type": "GestaoVeiculos.DTOs.Request.VeiculoEletricoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoVeiculos.DTOs.Response.VeiculoEletricoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoEletricoApiController",
+    "Method": "GetVeiculoEletrico",
+    "RelativePath": "api/VeiculoEletricoApi/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GestaoVeiculos.DTOs.Response.VeiculoEletricoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoEletricoApiController",
+    "Method": "PutVeiculoEletrico",
+    "RelativePath": "api/VeiculoEletricoApi/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "veiculoDTO",
+        "Type": "GestaoVeiculos.DTOs.Request.VeiculoEletricoRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculoEletricoApiController",
+    "Method": "DeleteVeiculoEletrico",
+    "RelativePath": "api/VeiculoEletricoApi/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculosDisponiveisApiController",
+    "Method": "GetVeiculosCombustaoDisponiveis",
+    "RelativePath": "api/VeiculosDisponiveisApi/combustao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GestaoVeiculos.Controllers.API.VeiculosDisponiveisApiController",
+    "Method": "GetVeiculosEletricosDisponiveis",
+    "RelativePath": "api/VeiculosDisponiveisApi/eletricos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

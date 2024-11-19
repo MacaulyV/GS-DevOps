@@ -1,0 +1,82 @@
+﻿[
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Hyundai Kona Electric",
+    "marca": "Hyundai",
+    "ano": 2021,
+    "consumo_Medio": 15.5,
+    "autonomia": 415
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Nissan Leaf",
+    "marca": "Nissan",
+    "ano": 2022,
+    "consumo_Medio": 17.3,
+    "autonomia": 300
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Chevrolet Bolt EV",
+    "marca": "Chevrolet",
+    "ano": 2021,
+    "consumo_Medio": 16.7,
+    "autonomia": 416
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Tesla Model 3",
+    "marca": "Tesla",
+    "ano": 2022,
+    "consumo_Medio": 14.8,
+    "autonomia": 500
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Audi e-tron",
+    "marca": "Audi",
+    "ano": 2021,
+    "consumo_Medio": 20.1,
+    "autonomia": 350
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "BMW i3",
+    "marca": "BMW",
+    "ano": 2020,
+    "consumo_Medio": 16.0,
+    "autonomia": 260
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Hyundai Kona Electric",
+    "marca": "Hyundai",
+    "ano": 2021,
+    "consumo_Medio": 14.7,
+    "autonomia": 395
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Volkswagen ID.4",
+    "marca": "Volkswagen",
+    "ano": 2022,
+    "consumo_Medio": 21.2,
+    "autonomia": 470
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Ford Mustang Mach-E",
+    "marca": "Ford",
+    "ano": 2022,
+    "consumo_Medio": 16.9,
+    "autonomia": 520
+  },
+  {
+    "tipo_Combustivel": "Eletricidade",
+    "modelo": "Porsche Taycan",
+    "marca": "Porsche",
+    "ano": 2021,
+    "consumo_Medio": 18.6,
+    "autonomia": 430
+  }
+]

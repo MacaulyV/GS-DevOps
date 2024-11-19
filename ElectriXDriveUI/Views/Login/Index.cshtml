@@ -1,0 +1,183 @@
+﻿@model ElectriXDriveUI.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - ElectriXDriveUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome para ícones (opcional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        nav,
+        footer {
+            display: none;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: radial-gradient(circle farthest-corner at 48.4% 47.5%, rgba(122,183,255,1) 0%, rgba(21,83,161,1) 90%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255);
+            transform: rotateY(0deg);
+            transition: transform 0.5s;
+            max-width: 400px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 1);
+        }
+
+        .login-container:hover {
+            transform: translate(-50%, -50%) rotateY(10deg) scale(1.05);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 600;
+            margin-right: 10px;
+            font-size: 2.3em
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input.form-control {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #f0f8ff;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+            padding-left: 45px;
+        }
+
+        input.form-control:focus {
+            background: #e0f0ff;
+            outline: none;
+            transform: translateY(-2px);
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .form-group i {
+            position: absolute;
+            top: 67%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: #007BFF;
+        }
+
+        .btn-primary {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #007BFF;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,123,255,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+        <form asp-action="Index" method="post">
+            <div class="form-group">
+                <i class="fas fa-user"></i>
+                <label asp-for="Nome"></label>
+                <input asp-for="Nome" class="form-control" placeholder="Digite seu nome" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-envelope"></i>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" placeholder="Digite seu email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <i class="fas fa-lock"></i>
+                <label asp-for="Senha"></label>
+                <input asp-for="Senha" type="password" class="form-control" placeholder="Digite sua senha" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const nav = document.querySelector('nav');
+        if (nav) {
+            nav.style.display = 'none';
+        }
+
+        // Efeito de movimento 3D com o mouse
+        const container = document.querySelector('.login-container');
+
+        container.addEventListener('mousemove', (e) => {
+            const { width, height, left, top } = container.getBoundingClientRect();
+            const x = e.clientX - left - width / 2;
+            const y = e.clientY - top - height / 2;
+            const rotateX = (y / height) * 25;  // Aumenta o ângulo para rotação mais perceptível
+            const rotateY = (x / width) * -25;
+            container.style.transform = `perspective(2000px) translate(-50%, -50%) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            container.style.transform = `translate(-50%, -50%) rotateX(0deg) rotateY(0deg) scale(1)`;
+        });
+
+        // Diminui a duração da transição para responder mais rapidamente
+        container.style.transition = 'transform 0.2s ease-out';
+    });
+</script>
+
+</body>
+</html>

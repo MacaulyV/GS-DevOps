@@ -1,0 +1,6 @@
+@GestaoVeiculos_HostAddress = http://localhost:5286
+
+GET {{GestaoVeiculos_HostAddress}}
+Accept: application/json
+
+###

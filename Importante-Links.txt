@@ -1,0 +1,11 @@
+Projeto GS-ElectriX-Drive
+
+Links Importantes:
+
+Repositório do Projeto no GitHub: https://github.com/MacaulyV/GS-ElectriX-Drive/tree/DEVELOPMENT-WITH-.NET
+
+----------------
+
+- Importante:
+
+  O link para o vídeo está disponível no repositório acima.

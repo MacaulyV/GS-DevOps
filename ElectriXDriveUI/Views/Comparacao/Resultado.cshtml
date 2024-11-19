@@ -1,0 +1,35 @@
+﻿@model ElectriXDriveUI.ViewModels.ResultadoComparacaoViewModel
+
+@{
+    ViewData["Title"] = "Resultado da Comparação";
+}
+
+<h2>Resultado da Comparação</h2>
+
+@if (Model != null)
+{
+    <div class="resultado-container">
+        <h4>Veículo de Combustão</h4>
+        <p><strong>Modelo:</strong> @Model.VeiculoCombustao.Modelo</p>
+        <p><strong>Quilometragem Mensal:</strong> @Model.VeiculoCombustao.QuilometragemMensal km</p>
+        <p><strong>Consumo Médio:</strong> @Model.VeiculoCombustao.ConsumoMedio km/l</p>
+        <p><strong>Litros Necessários:</strong> @Model.VeiculoCombustao.LitrosNecessarios litros</p>
+        <p><strong>Tanques Necessários:</strong> @Model.VeiculoCombustao.TanquesNecessarios</p>
+
+        <h4>Veículo Elétrico</h4>
+        <p><strong>Modelo:</strong> @Model.VeiculoEletrico.Modelo</p>
+        <p><strong>Quilometragem Mensal:</strong> @Model.VeiculoEletrico.QuilometragemMensal km</p>
+        <p><strong>Autonomia:</strong> @Model.VeiculoEletrico.Autonomia km</p>
+        <p><strong>Cargas Necessárias:</strong> @Model.VeiculoEletrico.CargasNecessarias</p>
+
+        <h4>Análise Detalhada</h4>
+        <p>@Model.AnaliseDetalhada</p>
+
+        <h4>Conclusão</h4>
+        <p>@Model.Conclusao</p>
+    </div>
+}
+else
+{
+    <p>Erro ao carregar os resultados da comparação. Tente novamente.</p>
+}

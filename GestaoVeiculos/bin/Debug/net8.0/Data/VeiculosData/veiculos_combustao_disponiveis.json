@@ -1,0 +1,42 @@
+﻿[
+  {
+    "modelo": "Honda Civic",
+    "marca": "Honda"
+  },
+  {
+    "modelo": "Toyota Corolla",
+    "marca": "Toyota"
+  },
+  {
+    "modelo": "Ford Ranger",
+    "marca": "Ford"
+  },
+  {
+    "modelo": "Volkswagen Golf",
+    "marca": "Volkswagen"
+  },
+  {
+    "modelo": "Chevrolet Onix",
+    "marca": "Chevrolet"
+  },
+  {
+    "modelo": "Hyundai HB20",
+    "marca": "Hyundai"
+  },
+  {
+    "modelo": "Jeep Compass",
+    "marca": "Jeep"
+  },
+  {
+    "modelo": "Fiat Argo",
+    "marca": "Fiat"
+  },
+  {
+    "modelo": "Renault Kwid",
+    "marca": "Renault"
+  },
+  {
+    "modelo": "Nissan Kicks",
+    "marca": "Nissan"
+  }
+]

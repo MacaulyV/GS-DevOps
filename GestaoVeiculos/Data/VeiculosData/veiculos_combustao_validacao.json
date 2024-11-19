@@ -1,0 +1,82 @@
+﻿[
+  {
+    "tipo_Combustivel": "gasolina",
+    "modelo": "Honda Civic",
+    "marca": "Honda",
+    "ano": 2019,
+    "consumo_Medio": 12.0,
+    "autonomia_Tanque": 600
+  },
+  {
+    "tipo_Combustivel": "etanol",
+    "modelo": "Toyota Corolla",
+    "marca": "Toyota",
+    "ano": 2020,
+    "consumo_Medio": 9.0,
+    "autonomia_Tanque": 480
+  },
+  {
+    "tipo_Combustivel": "diesel",
+    "modelo": "Ford Ranger",
+    "marca": "Ford",
+    "ano": 2021,
+    "consumo_Medio": 10.5,
+    "autonomia_Tanque": 700
+  },
+  {
+    "tipo_Combustivel": "gasolina",
+    "modelo": "Volkswagen Golf",
+    "marca": "Volkswagen",
+    "ano": 2018,
+    "consumo_Medio": 13.0,
+    "autonomia_Tanque": 650
+  },
+  {
+    "tipo_Combustivel": "gasolina",
+    "modelo": "Chevrolet Onix",
+    "marca": "Chevrolet",
+    "ano": 2022,
+    "consumo_Medio": 14.3,
+    "autonomia_Tanque": 500
+  },
+  {
+    "tipo_Combustivel": "etanol",
+    "modelo": "Hyundai HB20",
+    "marca": "Hyundai",
+    "ano": 2020,
+    "consumo_Medio": 8.7,
+    "autonomia_Tanque": 450
+  },
+  {
+    "tipo_Combustivel": "diesel",
+    "modelo": "Jeep Compass",
+    "marca": "Jeep",
+    "ano": 2021,
+    "consumo_Medio": 11.0,
+    "autonomia_Tanque": 600
+  },
+  {
+    "tipo_Combustivel": "gasolina",
+    "modelo": "Fiat Argo",
+    "marca": "Fiat",
+    "ano": 2021,
+    "consumo_Medio": 13.5,
+    "autonomia_Tanque": 530
+  },
+  {
+    "tipo_Combustivel": "etanol",
+    "modelo": "Renault Kwid",
+    "marca": "Renault",
+    "ano": 2022,
+    "consumo_Medio": 10.0,
+    "autonomia_Tanque": 420
+  },
+  {
+    "tipo_Combustivel": "gasolina",
+    "modelo": "Nissan Kicks",
+    "marca": "Nissan",
+    "ano": 2022,
+    "consumo_Medio": 12.8,
+    "autonomia_Tanque": 580
+  }
+]

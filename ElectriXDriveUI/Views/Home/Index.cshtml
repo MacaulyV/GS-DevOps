@@ -1,0 +1,173 @@
+﻿@{
+    ViewData["Title"] = "Tela de Introdução";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - ElectriXDriveUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome para ícones (opcional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        nav,
+        footer {
+            display: none;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: radial-gradient(circle farthest-corner at 48.4% 47.5%, rgba(122,183,255,1) 0%, rgba(21,83,161,1) 90%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro-container {
+            padding: 60px;
+            border-radius: 50px;
+            background-color: black;
+            transform: rotateY(0deg);
+            transition: transform 0.5s;
+            max-width: 1000px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 40px 120px rgba(0, 0, 0, 1);
+            text-align: center;
+            border: solid 5px black;
+        }
+
+            .intro-container:hover {
+                transform: translate(-50%, -50%) rotateY(10deg) scale(1.05);
+            }
+
+        h1 {
+            color: #333;
+            font-weight: 900;
+            margin-top: 40px;
+            font-size: 2.8em;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p.lead {
+            color: #555;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .btn-primary, .btn-success {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            margin: 10px;
+            width: 250px;
+        }
+
+        .btn-success {
+            box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+            background-image: linear-gradient(to right, #1D976C 0%, #93F9B9 51%, #1D976C 100%);
+        }
+
+        .btn-primary.btn-grad {
+            background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.4);
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,123,255,0.6);
+        }
+
+        .btn-success:hover {
+            background: #28a745;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(34, 139, 34, 0.6);
+        }
+
+        .btn-primary i, .btn-success i {
+            margin-right: 8px;
+        }
+
+        .intro-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        span {
+            color: #6FFFE7;
+        }
+
+        Title {
+            color: #00f5ff;
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.querySelector('nav');
+            if (nav) {
+                nav.style.display = 'none';
+            }
+
+            // Efeito de movimento 3D com o mouse (apenas movimento horizontal)
+            const container = document.querySelector('.intro-container');
+
+            if (container) {
+                container.addEventListener('mousemove', (e) => {
+                    const { width, left } = container.getBoundingClientRect();
+                    const x = e.clientX - left - width / 2;
+                    const rotateY = (x / width) * -25;  // Somente rotação horizontal
+                    container.style.transform = `perspective(4000px) translate(-50%, -50%) rotateY(${rotateY}deg) scale(1.05)`;
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    container.style.transform = `translate(-50%, -50%) rotateY(0deg) scale(1)`;
+                });
+
+                // Diminui a duração da transição para responder mais rapidamente
+                container.style.transition = 'transform 0.2s ease-out';
+            }
+
+        });
+    </script>
+
+</head>
+<body>
+    <div class="intro-container">
+        <!-- ... (logo, título, subtítulo) ... -->
+        <img src="~/images/logo.png" alt="ElectriX Drive" />
+        <h1 class="display-4"><i class="fas fa-car"></i> <span class="Title">Bem-vindo à</span> <span>ElectriX</span>  Drive</h1>
+        <p class="lead"><i class="fas fa-leaf" style="margin-right: 10px;"></i>Compare o custo e a eficiência ambiental do seu veículo com os de um carro elétrico.</p>
+        <hr />
+        <div>
+            <a href="@Url.Action("Index", "VeiculoCombustao")" class="btn btn-primary btn-grad btn-lg"><i class="fas fa-gas-pump"></i> Veículo de Combustão</a>
+            <a href="@Url.Action("Index", "VeiculoEletrico")" class="btn btn-success btn-lg"><i class="fas fa-bolt"></i> Veículo Elétrico</a>
+        </div>
+        <!-- Adicionando o botão de Comparar -->
+        <div style="margin-top: 20px;">
+            <a href="@Url.Action("Index", "Comparacao")" class="btn btn-warning btn-lg" style="font-size: 1.2em; font-weight:bold; background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(228,118,0,1) 0%, rgba(247,189,2,1) 90% ); border-radius: 15px; width: 220px; padding: 15px;" onmouseover="this.style.boxShadow='0 0 20px 10px rgba(255, 255, 0, 1)';" onmouseout="this.style.boxShadow='none'; border: none;">
+                <i class="fas fa-balance-scale"></i> Comparar
+            </a>
+        </div>
+    </div>
+</body>
+</html>
