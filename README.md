@@ -37,19 +37,11 @@ Assim, a solução completa visa oferecer uma experiência integrada para a gest
 
 ---
 
-## 🎥 Vídeo da VM do Projeto - Api Back-end - Windows
+## 🎥 Vídeo das VMs do Projeto -
 
 Para assistir ao **vídeo** clique no link abaixo:
 
-[🔗 Assista ao Vídeo do Projeto](https://youtu.be/8ICAMW2EHyU)
-
----
-
-## 🎥 Vídeo da VM do Projeto - UI Front-end - Linux
-
-Para assistir ao **vídeo** clique no link abaixo:
-
-[🔗 Assista ao Vídeo do Projeto](https://youtu.be/c1FmrArBt5c)
+[🔗 Assista ao Vídeo do Projeto](https://youtu.be/OyDTVve4Y4A)
 
 ---
 
