@@ -10,7 +10,7 @@
 
 ---
 
-## 📄 **Introdução**
+## 📄 **Solução e Objetivos**
 
 A plataforma ElectriX Drive é uma solução desenvolvida para fornecer aos usuários informações claras e detalhadas sobre os benefícios financeiros e ambientais da adoção de carros elétricos e painéis solares 🌞. Utilizando uma combinação de tecnologias modernas e acessíveis 💻, buscamos promover escolhas mais sustentáveis de forma prática e intuitiva. Seja por meio de uma interface web completa 🌐 ou de um aplicativo móvel 📱, a solução foi pensada para tornar a experiência do usuário enriquecedora, educativa e útil para decisões mais conscientes sobre mobilidade e sustentabilidade 🌱.
 
@@ -31,9 +31,23 @@ Assim, a solução completa visa oferecer uma experiência integrada para a gest
 
 ---
 
-## 🎥 Vídeo do Projeto
+## Diagrama de Arquitetura em Nuvem
 
-Para assistir ao vídeo de apresentação do **Projeto**, clique no link abaixo:
+![Diagrama](https://github.com/user-attachments/assets/5a1ee903-87ca-4589-badc-6130c9a2755f)
+
+---
+
+## 🎥 Vídeo da VM do Projeto - Api Back-end - Windows
+
+Para assistir ao **vídeo** clique no link abaixo:
+
+[🔗 Assista ao Vídeo do Projeto](https://youtu.be/8ICAMW2EHyU)
+
+---
+
+## 🎥 Vídeo da VM do Projeto - UI Front-end - Linux
+
+Para assistir ao **vídeo** clique no link abaixo:
 
 [🔗 Assista ao Vídeo do Projeto](https://youtu.be/c1FmrArBt5c)
 
