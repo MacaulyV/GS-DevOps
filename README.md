@@ -53,6 +53,8 @@ Para assistir ao **vídeo** clique no link abaixo:
 
 ---
 
+## Para mais Detalhes Sobre o Projeto (Opcional)
+
  <details>
   <summary align="center"><h3>📋 GestaoVeiculosAPI</h3></summary>
   <p>
@@ -89,8 +91,6 @@ Além disso, a documentação bem estruturada facilita o uso, a integração e o
   <p>
 
   ---
-
-## Para mais Detalhes Sobre o Projeto (Opcional)
 
 # 🚗 Documentação da Camada Web - ElectriXDriveUI
 
