@@ -43,6 +43,16 @@ Para assistir ao **vídeo** clique no link abaixo:
 
 ![Diagrama](https://github.com/user-attachments/assets/5a1ee903-87ca-4589-badc-6130c9a2755f)
 
+## Vm Lixux configurações
+
+![Print](https://github.com/user-attachments/assets/d94c64c0-744d-44f9-94c8-3e9bc22ceca6)
+
+---
+
+## Vm Lixux Portas
+
+![Print](https://github.com/user-attachments/assets/6bec5097-e49c-42c8-b5e6-7b41b1c98b0d)
+
 ---
 
 ## Vm Windows configurações
