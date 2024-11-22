@@ -1,4 +1,4 @@
-![Descrição banner](https://github.com/user-attachments/assets/fd23aae5-3758-4cd8-9b38-4abbf9e8b845)
+![image](https://github.com/user-attachments/assets/e247d831-7b5b-4151-ab82-34ea7c2a8ca0)![Descrição banner](https://github.com/user-attachments/assets/fd23aae5-3758-4cd8-9b38-4abbf9e8b845)
 
 # **ElectriX Drive Platform** 🚗💡
 
@@ -31,25 +31,41 @@ Assim, a solução completa visa oferecer uma experiência integrada para a gest
 
 ---
 
+## 🎥 Vídeo das VMs do Projeto -
+
+Para assistir ao **vídeo** clique no link abaixo:
+
+[🔗 Assista ao Vídeo do Projeto](https://youtu.be/OyDTVve4Y4A)
+
+---
+
 ## Diagrama de Arquitetura em Nuvem
 
 ![Diagrama](https://github.com/user-attachments/assets/5a1ee903-87ca-4589-badc-6130c9a2755f)
 
 ---
 
----
-
-## Diagrama de Arquitetura em Nuvem
+## Vm Windows configurações
 
 ![Print](https://github.com/user-attachments/assets/f07b03c9-62e5-42cf-a48a-dd6a9cdbeb71)
 
 ---
 
-## 🎥 Vídeo das VMs do Projeto -
+## Vm Windows Portas
 
-Para assistir ao **vídeo** clique no link abaixo:
+![Print](https://github.com/user-attachments/assets/5ed16b18-b14e-49de-8300-c12b7d4699b6)
 
-[🔗 Assista ao Vídeo do Projeto](https://youtu.be/OyDTVve4Y4A)
+---
+
+## Vm Windows Comandos para deploy
+
+![Print](https://github.com/user-attachments/assets/08b63453-6f14-4d87-9a72-84e3ac9d6f08)
+
+---
+
+## Vm lixux Comandos para deploy
+
+![Print](https://github.com/user-attachments/assets/56628bd5-4a02-4eaf-b179-eb414daf326e)
 
 ---
 
