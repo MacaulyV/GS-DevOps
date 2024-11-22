@@ -37,6 +37,14 @@ Assim, a solução completa visa oferecer uma experiência integrada para a gest
 
 ---
 
+---
+
+## Diagrama de Arquitetura em Nuvem
+
+![Print](https://github.com/user-attachments/assets/f07b03c9-62e5-42cf-a48a-dd6a9cdbeb71)
+
+---
+
 ## 🎥 Vídeo das VMs do Projeto -
 
 Para assistir ao **vídeo** clique no link abaixo:
